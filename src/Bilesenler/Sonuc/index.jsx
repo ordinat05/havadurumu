@@ -1,17 +1,17 @@
 function index({ havadurumuProp }) {
   return (
     <>
-      {typeof havadurumuProp != "undefined" && (
+      {typeof havadurumuProp.main != "undefined" && (
         <div className="sonuc">
           <div className="sehir">
-            {havadurumuProp.sehir}
+            {havadurumuProp.name},    {havadurumuProp.sys.country}
           </div>
           <div className="detay">
             <div className="derece">
-              {havadurumuProp.derece} °C
+              {Math.round(havadurumuProp.main.temp)} °C
             </div>
             <div className="status">
-              {havadurumuProp.status}
+              {havadurumuProp.weather[0].description}
             </div>
           </div>
         </div>

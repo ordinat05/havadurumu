@@ -16,7 +16,7 @@ function App() {
   return (
     <section className="uygulama">
       {/* Hava Durumu Uygulaması */}
-      <Arkaplan />
+      <Arkaplan arkaplan={havaDurumu.weather && havaDurumu.weather[0].main} />
       <div id="baslik">Hava Durumu</div>
       <AramaCubugu belirtHavaDurumuProp={belirtHavaDurumu} />
       <Sonuc havadurumuProp={havaDurumu} />

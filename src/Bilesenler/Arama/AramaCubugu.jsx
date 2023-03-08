@@ -11,7 +11,7 @@ function AramaCubugu({ belirtHavaDurumuProp }) {
   const ara = (e) => {
 
     if (e.key === "Enter") {
-      fetch(`${api.base}?q=${araParametre}&lang=tr&appid=${api.key}`)
+      fetch(`${api.base}?q=${araParametre}&units=metric&lang=tr&appid=${api.key}`)
         .then((veri) => veri.json())
         .then((sonuc) => {
           belirtAraParametre("");
